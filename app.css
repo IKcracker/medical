@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: poppins , sans-serif, monospace;
+    text-decoration: none;
+    list-style: none; 
+    
+    box-sizing: border-box;
+}
+body{
+    background-color: #EBF4F6;
+    color:  #071952;
+    transition: .4s;
+}
+.nav-box{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: #EBF4F6;
+z-index: 1;
+}
+
+.nav-box >.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 0px 2rem;
+    width: 100%;
+    box-shadow: 1px 0px 5px ;
+}
+.nav-box >.navbar>.logo{
+ font-weight: 600;
+ box-shadow: 0px 0px 10px ;
+ padding: .5rem;
+ border-radius: 2rem;
+}
+.nav-box >.navbar>ul{
+    display: flex;
+    gap: 2rem;
+    font-weight: 500; 
+    font-size: 1.2rem;
+    
+}
+.nav-box >.navbar>ul>li>a{
+    transition: .4s;
+}
+.nav-box >.navbar>ul>li>a:hover{
+    color: #37B7C3;
+}
+
+.home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.heading{
+    padding: 5rem 0 4rem 0;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height:2rem ;
+    letter-spacing: .1rem;
+}
+
+.home-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+.home-box>.right{
+    display: flex;
+    padding-right:2rem;
+    padding-top: 8rem;
+    height: 40%;
+    /* border: solid; */
+    width: 400px;
+    margin-right: 4rem;
+    
+}
+.home-box>.right>img{
+ width: 100%;
+ height:100%;
+ border-radius: 15px;
+ box-shadow: 0px 0px 10px 2px #37B7C3 ;
+ animation-name: pic-anim;
+ animation-duration: 10s;
+ animation-delay: 0s;
+ animation-iteration-count: infinite;
+
+}
+a{
+    color: #071952;
+}
+@keyframes pic-anim{
+
+   
+        0% {
+            transform: rotateY(0deg);
+        }
+        50% {
+            transform: rotateY(360deg); /* Complete rotation in the first 10% of the animation duration */
+        }
+        100% {
+            transform: rotateY(360deg); /* Hold the position for the rest of the animation duration */
+        }
+    
+   
+}
+.home-box>.left{
+  
+    padding-left: 2rem;
+    /* border: solid; */
+    max-width: 600px;
+}
+.left-box{
+    box-shadow: 4px 4px 4px 3px #37B7C3;
+    padding: 1.5rem  1.5rem 3.5rem 1.5rem;
+    border-radius: 5px;
+    position: relative;
+}
+.left-box>.btn{
+    margin-top: 2rem;
+    background-color: #37B7C3;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    animation-name: btn-anime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: absolute; 
+    bottom: 0;
+    left: 2px;
+}
+@keyframes btn-anime{
+    0%{
+        transform: translateY(-0px);
+    }
+    50%{
+        transform: translateY(-18px);
+    }
+    100%{
+        transform: translateY(-0px);
+    }
+}
+
+.Health-Conditions{
+    position: absolute;
+    top: 690px;
+    height: 100vh;
+    background-color: #071952;
+    color: #37B7C3;
+    padding-top: 5rem;
+}
+
+.Health-Conditions-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Health-Conditions > h1{
+    text-align: center;
+    padding: 2rem;
+}
+.Health-Conditions-box>.cell{
+    width: 90%;
+    background-color: #37B7C3;
+    color: #071952;
+    border-radius: 45px;
+    padding: 1rem;
+    transition: .2s;
+   
+   
+}
+
+.Health-Conditions-box>.cell:hover{
+    box-shadow: 0px 0px 4px 2px #49e7f5;
+}
+
+.Health-Conditions-box >.cell:nth-child(2n){
+   align-self: flex-end;
+}
